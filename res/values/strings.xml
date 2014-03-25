@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ApkGrabber</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Click Grab to start collecting Application Apk\'s.</string>
+    <string name="button_title">Grab</string>
+    <string name="complete_message">APK\'s copied successfully to the sdcard\\APK folder</string>
+
+</resources>
