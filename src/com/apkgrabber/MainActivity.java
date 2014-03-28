@@ -18,6 +18,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.view.View.OnClickListener;
 
@@ -27,16 +28,17 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-
+		final TextView processingText = (TextView) findViewById(R.id.textView2);
+		processingText.setText("please wait while processing...");
 		Button grabButton = (Button) findViewById(R.id.button1);
 		grabButton.setOnClickListener(new OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
-
 				grabApk();
 				Toast toast = Toast.makeText(getApplicationContext(), R.string.complete_message, Toast.LENGTH_SHORT);
 				toast.show();
+				processingText.setText("Completed Successfully..!!");
 			}
 		});
 	}
@@ -54,6 +56,7 @@ public class MainActivity extends Activity {
 		mainIntent.addCategory(Intent.CATEGORY_LAUNCHER);
 		final List pkgAppsList = getPackageManager().queryIntentActivities( mainIntent, 0);
 		int z = 0;
+		
 		for (Object object : pkgAppsList) {
 
 			ResolveInfo info = (ResolveInfo) object;
@@ -64,8 +67,8 @@ public class MainActivity extends Activity {
 
 			
 			// APPLICATION NAME WHICH YOU WANT TO EXTRACT APK OF
-			if(f1.getName().toString().contains("mybrowser")){
-
+//			if(f1.getName().toString().contains("mybrowser")){
+			if(true){
 				try{
 
 					String file_name = info.loadLabel(getPackageManager()).toString();

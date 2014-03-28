@@ -6,5 +6,6 @@
     <string name="hello_world">Click Grab to start collecting Application Apk\'s.</string>
     <string name="button_title">Grab</string>
     <string name="complete_message">APK\'s copied successfully to the sdcard\\APK folder</string>
+    <string name="wait">processing...</string>
 
 </resources>
