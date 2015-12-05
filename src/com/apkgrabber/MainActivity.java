@@ -66,8 +66,8 @@ public class MainActivity extends Activity {
 			Log.v("APPS", "Filename: "+f1.getName().toString()+"----"+info.loadLabel(getPackageManager()));
 
 			
-			// APPLICATION NAME WHICH YOU WANT TO EXTRACT APK OF
-//			if(f1.getName().toString().contains("mybrowser")){
+			// If specific application to be extracted use application name which you want to extract apk of
+			// if(f1.getName().toString().contains("mybrowser")){
 			if(true){
 				try{
 
